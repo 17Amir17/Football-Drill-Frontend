@@ -5,23 +5,17 @@
     <title>Webpack App</title>
   </head>
   <body class="text-center">
-
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <header class="masthead .d-flex .align-items-center">
-          <h1 class="masthead-brand">Cover</h1>
+        <h1 class="masthead-brand">Cover</h1>
       </header>
 
       <main role="main" class="inner cover">
         <div class="container">
-            <div class="row">
-              <div class="col-sm">
-                One of three columns
-              </div>
-              <div class="col-sm">
-                One of three columns
-              </div>
-            </div>
+          <div id="player-container" class="row">
+            <div class="col-sm">One of three columns</div>
           </div>
+        </div>
       </main>
 
       <footer class="mastfoot mt-auto">
@@ -30,6 +24,30 @@
         </div>
       </footer>
     </div>
+  </body>
+
+  <div id="player-template" class="col-sm" hidden>
+    <div
+      class="card fifa-card d-flex align-items-start text-left"
+      style="width: 18rem"
+    >
+      <img
+        class="card-img-top fifa-image"
+        src="https://pbs.twimg.com/media/Bprq3gRCUAE-UC7.jpg"
+        alt="Card image cap"
+      />
+      <div class="card-body">
+        <h5 class="card-title fifa-title">Player</h5>
+        <p>First Name:<span class="fifa-fname"></span></p>
+        <p>Surname:<span class="fifa-sname"></span></p>
+        <p>Age:<span class="fifa-age"></span></p>
+        <p>Salary:<span class="fifa-salary"></span></p>
+        <p>Strong Leg:<span class="fifa-sleg"></span></p>
+        <p>Position: <span class="fifa-position"></span></p>
+        <p>Celebration Sentance:<span class="fifa-celebration"></span></p>
+      </div>
+    </div>
+  </div>
 
   <script>
     if ('serviceWorker' in navigator) {
