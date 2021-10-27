@@ -48,3 +48,15 @@ export async function score(id) {
     alert(error);
   }
 }
+
+export async function addPlayer(playerDetails) {
+  try {
+    console.log(playerDetails);
+    const response = await axios.post(`${baseURL}create/player/`, null, {
+      body: playerDetails,
+    });
+    return response.data;
+  } catch (error) {
+    alert(error);
+  }
+}

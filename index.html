@@ -9,6 +9,7 @@
       <header class="masthead .d-flex .align-items-center">
         <h1 class="masthead-brand">Fifa 2060</h1>
       </header>
+      <button id='add-button' type="button" class="btn btn-light" style='float: right'>Add Player</button>
 
       <main role="main" class="inner cover">
         <div id="player-container" class="container d-flex flex-row"></div>
@@ -57,6 +58,48 @@
     </div>
   </div>
 
+  <div
+  class="modal fade"
+  id="add"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add Player</h5>
+      </div>
+      <div class="modal-body">
+        <p>Name: <input type='text' class="fifa-fname"></input></p>
+        <p>Surname: <input type='text' class="fifa-sname"></input></p>
+        <p>Age:<input type='number' class="fifa-age"></input></p>
+        <p>Salary:<input type='number' class="fifa-salary"></input></p>
+        <p>Strong Leg:<select class="form-select fifa-sleg" aria-label="Select Leg">
+          <option selected>Open this select menu</option>
+          <option value="Left">Left</option>
+          <option value="Right">Right</option>
+        </select></p>
+        <p>Position: <input type='text' class="fifa-position"></input></p>
+        <p>Image: <input type="text" class="form-control fifa-image" id="basic-url" aria-describedby="basic-addon3"></input></p>
+        <p>Celebration Sentance:<input type='text' class="fifa-celebration"></input></p>
+      </div>
+      <div class="modal-footer">
+        <button
+          id="closeAdd"
+          type="button"
+          class="btn btn-secondary"
+          data-dismiss="modal"
+        >
+          Close
+        </button>
+        <button id='saveAdd' type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
   <div id="player-template" class="col-sm" data-id="0" hidden>
     <div
       class="card fifa-card d-flex align-items-start text-left"
@@ -69,13 +112,13 @@
       />
       <div class="card-body">
         <h5 class="card-title fifa-title">Player</h5>
-        <p>First Name:<span class="fifa-fname"></span></p>
-        <p>Surname:<span class="fifa-sname"></span></p>
-        <p>Age:<span class="fifa-age"></span></p>
-        <p>Salary:<span class="fifa-salary"></span></p>
-        <p>Strong Leg:<span class="fifa-sleg"></span></p>
+        <p>First Name: <span class="fifa-fname"></span></p>
+        <p>Surname: <span class="fifa-sname"></span></p>
+        <p>Age: <span class="fifa-age"></span></p>
+        <p>Salary: <span class="fifa-salary"></span></p>
+        <p>Strong Leg: <span class="fifa-sleg"></span></p>
         <p>Position: <span class="fifa-position"></span></p>
-        <p>Celebration Sentance:<span class="fifa-celebration"></span></p>
+        <p>Celebration Sentance: <span class="fifa-celebration"></span></p>
         <div>
           <button type="button" class="btn btn-primary fifa-score">Score</button>
           <button type="button" class="btn btn-primary fifa-edit">Edit</button>
