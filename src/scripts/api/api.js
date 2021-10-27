@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const baseURL = 'https://footballdrill.herokuapp.com/';
-
+// const baseURL = 'http://localHost:3000/';
 export async function getAllPlayers() {
   try {
     const response = await axios.get(`${baseURL}get/`);
@@ -52,11 +52,12 @@ export async function score(id) {
 export async function addPlayer(playerDetails) {
   try {
     console.log(playerDetails);
-    const response = await axios.post(`${baseURL}create/player/`, null, {
-      body: playerDetails,
-    });
+    const response = await axios.post(
+      `${baseURL}create/player/`,
+      playerDetails
+    );
     return response.data;
   } catch (error) {
-    alert(error);
+    alert('ERROR: ' + error.response.data.message);
   }
 }

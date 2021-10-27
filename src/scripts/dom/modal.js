@@ -48,7 +48,7 @@ async function onSaveAddClick(event) {
   playerDetails.salary = Number(addModal.querySelector('.fifa-salary').value);
   playerDetails.position = addModal.querySelector('.fifa-position').value;
   playerDetails.celebrationSentance =
-    editModal.querySelector('.fifa-celebration').value;
+    addModal.querySelector('.fifa-celebration').value;
   playerDetails.image = addModal.querySelector('.fifa-image').value;
   playerDetails.strongLeg = addModal.querySelector('.fifa-sleg').value;
 

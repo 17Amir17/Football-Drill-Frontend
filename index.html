@@ -4,23 +4,21 @@
     <meta charset="utf-8" />
     <title>Webpack App</title>
   </head>
-  <body class="text-center">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <body class="text-center .d-flex flex-column">
       <header class="masthead .d-flex .align-items-center">
         <h1 class="masthead-brand">Fifa 2060</h1>
       </header>
       <button id='add-button' type="button" class="btn btn-light" style='float: right'>Add Player</button>
-
-      <main role="main" class="inner cover">
-        <div id="player-container" class="container d-flex flex-row"></div>
-      </main>
+      <div class="container">
+        <div class="row">
+          <div id="player-container" class="container d-flex flex-row overflow-auto"></div>
+      </div>
 
       <footer class="mastfoot mt-auto">
         <div class="inner">
           <p>Made by Amir</p>
         </div>
       </footer>
-    </div>
   </body>
 
   <div
@@ -76,11 +74,13 @@
         <p>Surname: <input type='text' class="fifa-sname"></input></p>
         <p>Age:<input type='number' class="fifa-age"></input></p>
         <p>Salary:<input type='number' class="fifa-salary"></input></p>
-        <p>Strong Leg:<select class="form-select fifa-sleg" aria-label="Select Leg">
-          <option selected>Open this select menu</option>
-          <option value="Left">Left</option>
-          <option value="Right">Right</option>
-        </select></p>
+        <p>Strong Leg:
+          <select class="form-select fifa-sleg" aria-label="Select Leg">
+            <option selected>Open this select menu</option>
+            <option value="Left">Left</option>
+            <option value="Right">Right</option>
+          </select>
+        </p>
         <p>Position: <input type='text' class="fifa-position"></input></p>
         <p>Image: <input type="text" class="form-control fifa-image" id="basic-url" aria-describedby="basic-addon3"></input></p>
         <p>Celebration Sentance:<input type='text' class="fifa-celebration"></input></p>
