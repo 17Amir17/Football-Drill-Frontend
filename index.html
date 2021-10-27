@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Webpack App</title>
+  </head>
+  <body class="text-center">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead .d-flex .align-items-center">
+          <h1 class="masthead-brand">Cover</h1>
+      </header>
+
+      <main role="main" class="inner cover">
+        <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                One of three columns
+              </div>
+              <div class="col-sm">
+                One of three columns
+              </div>
+            </div>
+          </div>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Made by Amir</p>
+        </div>
+      </footer>
+    </div>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker
+          .register('service-worker.js')
+          .then((registration) => {
+            console.log('Service Worker registered: ', registration);
+          })
+          .catch((registrationError) => {
+            console.error(
+              'Service Worker registration failed: ',
+              registrationError
+            );
+          });
+      });
+    }
+  </script>
+</html>
