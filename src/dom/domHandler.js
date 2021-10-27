@@ -10,18 +10,20 @@ function createPlayerCard(playerDetails) {
   newCard.querySelector('.fifa-sleg').innerText = playerDetails.strongLeg;
   newCard.querySelector('.fifa-position').innerText = playerDetails.position;
   newCard.querySelector('.fifa-celebration').innerText =
-    playerDetails.celebrationText;
+    playerDetails.celebrationSentance;
+  newCard.hidden = false;
   return newCard;
 }
 
 playerContainer.appendChild(
   createPlayerCard({
     firstName: 'Chicharito',
-    surName: '5',
-    salary: 688.1593749999998,
-    age: 5,
+    surName: 'Hernandez',
+    salary: 550000,
+    age: 32,
     image: 'https://pbs.twimg.com/media/Bprq3gRCUAE-UC7.jpg',
     strongLeg: 'Left',
-    position: 'Leftback',
+    position: 'Middfield',
+    celebrationSentance: 'Fuck Yeah!',
   })
 );
