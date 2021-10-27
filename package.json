@@ -10,8 +10,7 @@
     "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",
     "serve": "webpack serve",
-    "start": "npm install --dev && npm run serve",
-    "heroku-prebuild": "npm install --dev"
+    "start": "npm install --dev && npm run serve"
   },
   "repository": {
     "type": "git",
